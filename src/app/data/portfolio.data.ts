@@ -337,16 +337,16 @@ export const testimonialData: TestimonialSection = {
   testimonials: [
     {
       id: "1",                                                           // Identifiant unique
-      quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, tenetur nisi iste, ipsa obcaecati quis laudantium error distinctio excepturi", // Citation
-      authorName: "Linzi Landry",                                       // Nom de l'auteur
-      authorRole: "Graphic Designer",                                   // Rôle/titre de l'auteur
+      quote: "Sur le projet de flotte automobile, il a su structurer tout le cycle de vie: suivi des vehicules, echeances de conformite, alertes et tableaux de bord. Le resultat est clair, fiable et vraiment utile pour le pilotage quotidien.", // Citation
+      authorName: "Responsable Operations - Projet FLOTTE",                                       // Nom de l'auteur
+      authorRole: "Client metier",                                   // Rôle/titre de l'auteur
       authorImageUrl: "https://via.placeholder.com/70x70"               // Photo de l'auteur
     },
     {
       id: "2",
-      quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, tenetur nisi iste, ipsa obcaecati quis laudantium error distinctio excepturi",
-      authorName: "John Doe",
-      authorRole: "Web Developer",
+      quote: "Sur SANKOFA, il a transforme un besoin complexe en une plateforme simple a utiliser: gestion des articles, imports, ventes et lecture du chiffre d affaires. Son approche est differente, plus orientee produit et impact concret.",
+      authorName: "Coordination Produit - SANKOFA",
+      authorRole: "Partenaire projet",
       authorImageUrl: "https://via.placeholder.com/70x70"
     }
     // Ajoutez d'autres témoignages en copiant un objet ci-dessus
