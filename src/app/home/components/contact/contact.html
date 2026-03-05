@@ -6,56 +6,33 @@
                 <div class="col-lg-12">
                     <div class="text-center">
                         <h2  data-aos="heading-show" class="text_background">
-                            Get in Touch
-                            <span class="heading_background">Contact Me</span>
+                            {{ data.title }}
+                            <span class="heading_background">{{ data.subtitle }}</span>
                         </h2>
-                        <p class="m-0">It is a long established fact that a reader will be distracted by the readable content</p>
+                        <p class="m-0">{{ data.description }}</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section-content flex-grow-1">
+        <div class="section-content flex-grow-1 contact-rhumb">
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="d-flex flex-row flex-sm-column flex-md-row justify-content-md-center mb-3 text-left text-sm-center text-md-left">
-                        <div class="contact-icon mr-md-3 mr-3 mr-sm-0">
-                            <span class="mbri-letter"></span>
-                        </div>
-                        <div class="contact-details mt-2">
-                            <h5>Email Us</h5>
-                            <p><a href="mailto:kevinmiller@alb.com">kevinmiller@alb.com</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="d-flex flex-row flex-sm-column flex-md-row justify-content-md-center mb-3 text-left text-sm-center text-md-left">
-                        <div class="contact-icon mr-md-3 mr-3 mr-sm-0">
-                            <span class="mbri-mobile"></span>
-                        </div>
-                        <div class="contact-details mt-2">
-                            <h5>Call</h5>
-                            <p><a href="tel:+1000123456789">+1 xxx-888-7887</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="d-flex flex-row flex-sm-column flex-md-row justify-content-md-center mb-3 text-left text-sm-center text-md-left">
-                        <div class="contact-icon mr-md-3 mr-3 mr-sm-0">
-                            <span class="mbri-map-pin"></span>
-                        </div>
-                        <div class="contact-details mt-2">
-                            <h5>Visit</h5>
-                            <p>New York, USA</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div class="col-lg-5 mt-4">
+                    <div class="contact-aside p-4">
+                        <p class="mini-label mb-2">Start a project</p>
+                        <h3 class="mb-3">Questions, ideas, or a full project in mind?</h3>
+                        <p class="mb-4">Drop a note and get clear answers with the next best step for your project.</p>
+                        <a href="#contact-form" class="btn btn-primary mb-3">Book a call</a>
 
+                        <div class="contact-aside-links">
+                            <p class="mb-1">Or shoot an email</p>
+                            <a href="mailto:kouayavana20@gmail.com">kouayavana20@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <form action="php/form.php" method="post" id="contact-form">
+                <div class="col-lg-7 mt-4">
+                    <form [action]="data.formAction || 'php/form.php'" method="post" id="contact-form">
                         <div class="row">
                             <div class="col-lg-6 mt-3">
                                 <div class="form-group">
@@ -77,7 +54,7 @@
                             </div>
                             <div class="col-lg-12 mt-3">
                                 <div class="form-group">
-                                    <textarea name="text" id="text"  rows="6" class="form-control" required></textarea>
+                                    <textarea name="text" id="text" rows="6" class="form-control" required></textarea>
                                     <label>Message</label>
                                 </div>
                             </div>
@@ -93,6 +70,25 @@
                 </div>
             </div>
 
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="faq-wrap p-4">
+                        <h4 class="mb-3">Frequently asked questions</h4>
+                        <details>
+                            <summary>What is your typical project process?</summary>
+                            <p>Discovery and strategy, then interface design, then implementation and launch with validation at each stage.</p>
+                        </details>
+                        <details>
+                            <summary>Do you work only on full projects?</summary>
+                            <p>No. I can work on complete builds or focused sprints for one section or one feature.</p>
+                        </details>
+                        <details>
+                            <summary>Can you collaborate with an existing team?</summary>
+                            <p>Yes. I can integrate with in-house designers/developers and keep delivery clear and documented.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
         </div>
 
 

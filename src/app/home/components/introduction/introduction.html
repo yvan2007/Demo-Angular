@@ -1,26 +1,68 @@
-<main class="content center-main" >
+<main class="content center-main">
     <!--INTRODUCTION SECTION START-->
     <section class="home d-flex" id="home">
-        
         <!--Start Background Image-->
         <div class="mono-background">
             <div class="mono-background-inner" data-aos-duration="1200" data-aos-delay="450" data-aos="fade-left">
-                <img src="https://via.placeholder.com/1405x937" width="1405" height="937" class="img-align-center" alt="">
+                <img [src]="data.backgroundImageUrl" width="1405" height="937" class="img-align-center" alt="">
+            </div>
+            <div class="hero-webgl-wrap" aria-hidden="true">
+                <canvas #heroWebglCanvas class="hero-webgl-canvas"></canvas>
+            </div>
+            <div class="mana-3d-stage" aria-hidden="true">
+                <div class="mana-3d-core">
+                    <span class="mana-ring mana-ring-a"></span>
+                    <span class="mana-ring mana-ring-b"></span>
+                    <span class="mana-ring mana-ring-c"></span>
+                    <div class="mana-can">
+                        <span class="mana-can-top"></span>
+                        <span class="mana-can-label">ENERGY</span>
+                        <span class="mana-can-shine"></span>
+                    </div>
+                    <span class="mana-fruit mana-fruit-a"></span>
+                    <span class="mana-fruit mana-fruit-b"></span>
+                    <span class="mana-fruit mana-fruit-c"></span>
+                </div>
             </div>
         </div>
         <!--End Background Image-->
 
-        <div class="container introduction text-left" >
-            <p class="welcome_text mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">I'm a <span class="welcome-text-type" data-options="Web Developer, Graphic Designer" ></span></p>
+        <div class="container introduction text-left">
+            <p class="welcome_text mb-4 scroll-typo" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">
+                {{ data.welcomeText }}
+                <span class="welcome-text-type" [attr.data-options]="data.roles.join(', ')"></span>
+            </p>
+
             <div id="parallax-scene" class="mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
                 <div class="heading-zone">
-                    <h1>Kevin Miller</h1>
+                    <h1 class="scroll-typo">{{ data.name }}</h1>
                 </div>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="450">
-                <a href="#about" class="btn  btn-primary btn-small">Learn More</a>
+
+            <div class="hero-action-row" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="450">
+                <a [href]="data.buttonLink" class="btn btn-primary btn-small mana-liquid-btn">{{ data.buttonText }}</a>
+                <span class="hero-pill">Open to projects</span>
+                <span class="hero-pill hero-pill-alt">Creative engineer</span>
+            </div>
+
+            <div class="mana-flavor-row mt-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="520">
+                <span class="mana-flavor-chip">Web Apps</span>
+                <span class="mana-flavor-chip">Mobile UX</span>
+                <span class="mana-flavor-chip">Data & API</span>
+                <span class="mana-flavor-chip">Automation</span>
             </div>
         </div>
+
+        <div class="mana-energy-band" aria-hidden="true">
+            <div class="mana-energy-track">
+                <span>Infused of digital energy</span>
+                <span>Fast build - clean code - premium interface</span>
+                <span>From idea to launch</span>
+                <span>Infused of digital energy</span>
+                <span>Fast build - clean code - premium interface</span>
+            </div>
+        </div>
+
         <div class="scroll-down">
             <a href="#about" class="scroll-down-link text-center hoveroff">
                 <div class="scroll-title">Scroll Down</div>
@@ -41,6 +83,24 @@
     <div class="section facts backgound-section" style="background-image: url(https://via.placeholder.com/1920x1080)" data-aos-id="facts">
 
         <div class="container">
+            <div class="mana-benefits-grid mb-5">
+                <div class="mana-benefit-item">
+                    <h4>Sans friction</h4>
+                    <p>Un parcours clair, fluide et orienté conversion pour tes visiteurs.</p>
+                </div>
+                <div class="mana-benefit-item">
+                    <h4>Energie naturelle</h4>
+                    <p>Des animations vivantes, sans surcharge visuelle ni perte de lisibilite.</p>
+                </div>
+                <div class="mana-benefit-item">
+                    <h4>Stack robuste</h4>
+                    <p>Frontend premium + architecture Angular propre, evolutive et maintenable.</p>
+                </div>
+                <div class="mana-benefit-item">
+                    <h4>Impact reel</h4>
+                    <p>Un portfolio qui raconte ta valeur et pousse a la prise de contact.</p>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-3 col-sm-6 mt-3 mt-lg-0">
                     <div class="fact-single text-center">
@@ -48,7 +108,7 @@
                             <span class="mbri-timer"></span>
                         </div>
                         <div class="fact-info">
-                            <span class="tmcounter" data-from="0" data-to="20" data-speed="1500">20</span>+
+                            <span class="tmcounter" data-from="0" [attr.data-to]="facts.yearsExperience" data-speed="1500">{{ facts.yearsExperience }}</span>+
                         </div>
                         <div class="fact-meta">
                             <span>Years Experiance</span>
@@ -61,7 +121,7 @@
                             <span class="mbri-smile-face"></span>
                         </div>
                         <div class="fact-info">
-                            <span class="tmcounter" data-from="0" data-to="400" data-speed="1500">400</span>+
+                            <span class="tmcounter" data-from="0" [attr.data-to]="facts.happyClients" data-speed="1500">{{ facts.happyClients }}</span>+
                         </div>
                         <div class="fact-meta">
                             <span>Happy Clients</span>
@@ -74,7 +134,7 @@
                             <span class="mbri-magic-stick"></span>
                         </div>
                         <div class="fact-info">
-                            <span class="tmcounter" data-from="0" data-to="7853" data-speed="1500">7853</span>
+                            <span class="tmcounter" data-from="0" [attr.data-to]="facts.projectsDone" data-speed="1500">{{ facts.projectsDone }}</span>
                         </div>
                         <div class="fact-meta">
                             <span>Projects Done</span>
@@ -87,7 +147,7 @@
                             <span class="mbri-save"></span>
                         </div>
                         <div class="fact-info">
-                            <span class="tmcounter" data-from="0" data-to="2569" data-speed="1500">2569</span>
+                            <span class="tmcounter" data-from="0" [attr.data-to]="facts.downloads" data-speed="1500">{{ facts.downloads }}</span>
                         </div>
                         <div class="fact-meta">
                             <span>Download</span>
@@ -99,6 +159,115 @@
         </div>
     </div>
     <!--FACTS SECTION END-->
+
+    <section class="streamtime-section py-5">
+        <div class="container">
+            <div class="streamtime-head text-center mb-4">
+                <h3>A better way of working</h3>
+                <p class="m-0">Plan, track, collaborate and improve with a clean product workflow.</p>
+            </div>
+
+            <div class="streamtime-tabs-wrap">
+                <div class="streamtime-stage">
+                    <div class="streamtime-panel">
+                        <p class="streamtime-panel-kicker mb-2">Step {{ activeFeatureIndex + 1 }}</p>
+                        <h4 class="mb-2">{{ featureSteps[activeFeatureIndex].title }}</h4>
+                        <p class="mb-3">{{ featureSteps[activeFeatureIndex].description }}</p>
+                        <div class="streamtime-panel-stats">
+                            <span>{{ featureSteps[activeFeatureIndex].statA }}</span>
+                            <span>{{ featureSteps[activeFeatureIndex].statB }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="streamtime-tabs" role="tablist" aria-label="Feature steps">
+                    <button
+                        type="button"
+                        class="streamtime-tab"
+                        *ngFor="let step of featureSteps; let i = index"
+                        [class.active]="i === activeFeatureIndex"
+                        (click)="setActiveFeature(i)"
+                    >
+                        <span class="streamtime-tab-index">0{{ i + 1 }}</span>
+                        <span class="streamtime-tab-text">{{ step.title }}</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-lab-section py-5">
+        <div class="container">
+            <div class="case-lab-head text-center mb-4">
+                <h3>Case Studies</h3>
+                <p class="m-0">Des projets reels, structures comme des produits premium.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mt-3" *ngFor="let item of caseStudies">
+                    <article class="case-lab-card p-4 h-100">
+                        <div class="case-lab-top mb-3">
+                            <span class="case-lab-tag">{{ item.project }}</span>
+                            <span class="case-lab-role">{{ item.role }}</span>
+                        </div>
+
+                        <div class="case-lab-block mb-3">
+                            <h4>Probleme</h4>
+                            <p class="m-0">{{ item.challenge }}</p>
+                        </div>
+                        <div class="case-lab-block mb-3">
+                            <h4>Solution</h4>
+                            <p class="m-0">{{ item.solution }}</p>
+                        </div>
+                        <div class="case-lab-block mb-0">
+                            <h4>Impact</h4>
+                            <p class="m-0">{{ item.impact }}</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="immersive-pin-section">
+        <div class="container immersive-pin-wrap">
+            <div class="immersive-copy">
+                <p class="immersive-kicker scroll-typo">Immersive Product Story</p>
+                <h2 class="immersive-title scroll-typo">From complex operations to elegant digital flow.</h2>
+                <p class="scroll-typo">Chaque scroll revele une nouvelle scene: pilotage, execution, et performance dans une experience narrative premium.</p>
+            </div>
+            <div class="immersive-visual">
+                <div class="immersive-layer layer-a"></div>
+                <div class="immersive-layer layer-b"></div>
+                <div class="immersive-layer layer-c"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="h-scroll-section">
+        <div class="h-scroll-track">
+            <article class="h-panel">
+                <span>01</span>
+                <h3>Discover</h3>
+                <p>Onboarding narratif avec positionnement clair et preuve immediate.</p>
+            </article>
+            <article class="h-panel">
+                <span>02</span>
+                <h3>Organize</h3>
+                <p>Structuration des operations: articles, imports, ventes et categories.</p>
+            </article>
+            <article class="h-panel">
+                <span>03</span>
+                <h3>Control</h3>
+                <p>KPIs visuels, conformite, alertes et tableaux de bord decisionnels.</p>
+            </article>
+            <article class="h-panel">
+                <span>04</span>
+                <h3>Scale</h3>
+                <p>Base solide pour evoluer rapidement vers de nouveaux modules metier.</p>
+            </article>
+        </div>
+    </section>
 
     <!--SERVICES SECTION START-->
     
@@ -125,13 +294,13 @@
                 <div class="col-12">
                     <div class="row box p-5 mx-3 mx-md-0 align-items-center text-center">
                         <div class="col-md-4 m-0 mb-3 mb-md-0">
-                            <h3 class="m-0">Create a Website</h3>
+                            <h3 class="m-0">{{ projectCta.title }}</h3>
                         </div>
                         <div class="col-md-4 m-0 mb-3 mb-md-0">
-                            <p class="m-0">We can create and develop together.</p>
+                            <p class="m-0">{{ projectCta.description }}</p>
                         </div>
                         <div class="col-md-4">
-                            <a href="#contact" class="btn btn-outline-primary">Let's do this</a>
+                            <a [href]="projectCta.buttonLink" class="btn btn-outline-primary">{{ projectCta.buttonText }}</a>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,21 @@
+.nav-theme {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.6rem;
+}
+
+.theme-toggle-btn {
+  border: 1px solid rgba(150, 179, 255, 0.4);
+  background: rgba(7, 24, 57, 0.72);
+  color: #e9f3ff;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+  border-color: rgba(82, 241, 255, 0.65);
+}

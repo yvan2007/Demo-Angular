@@ -11,5 +11,9 @@ export * from './contact.model';
 export * from './blog.model';
 export * from './video.model';
 export * from './section.model';
+export * from './social.model';
+export * from './facts.model';
+export * from './project-cta.model';
+export * from './site-content.model';
 
 

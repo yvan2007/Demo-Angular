@@ -1,0 +1,32 @@
+KOUAKOU EBOUHO FRANCK YVAN
+Computer Scientist - Software Engineering
+Location: Grand-Bassam, Cote d'Ivoire
+Email: kouayavana20@gmail.com
+Phone: +225 0160398864
+GitHub: https://github.com/yvan2007
+LinkedIn: https://www.linkedin.com/in/yvan-kouakou-488564394/
+
+PROFILE
+Creative and solution-oriented software engineering student with practical experience in building digital products for real business operations.
+
+KEY PROJECTS
+1) SANKOFA - Artisan Business Digital Platform
+- Built a digital solution for artisan operations.
+- Managed article generation, imports, sales tracking, quantity by category, and turnover analytics.
+- Implemented dual UI modes (light and dark) for usability in different environments.
+
+2) FLOTTE - Fleet Management Platform
+- Delivered a professional fleet management platform.
+- Covered vehicle lifecycle, rentals, maintenance, fuel logs, compliance deadlines, and dashboard alerts.
+- Added role-based access, reporting, import workflows, TCO indicators, and audit-ready traceability.
+
+TECHNICAL SKILLS
+- Python, Django, Flask, JavaScript, PHP, Laravel
+- Flutter, Dart, HTML/CSS
+- MySQL, SQLite
+- Git/GitHub, API REST, Web Scraping
+- IoT and Robotics
+
+EDUCATION
+- Bachelor in Software Engineering (Year 3), Institut Ivoirien de Technologie (2025 - 2026)
+

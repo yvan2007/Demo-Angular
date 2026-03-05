@@ -5,7 +5,7 @@
             <div class="site-logo">
                 <a href="#" class="hoveroff" title="">
                     <!--<img src="" alt="">-->
-                    Rect<span>CV</span>
+                    Ebouho<span>CV</span>
                 </a>
             </div>
             <button class="button-toggler navbar-toggler collapsed" type="button" data-target="#navigation" data-toggle="collapse" aria-controls="navigation" aria-expanded="false">
@@ -35,6 +35,14 @@
                 </li>
                 <li>
                     <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-theme">
+                    <button type="button" class="theme-toggle-btn" (click)="toggleTheme()">
+                        {{ isLightTheme ? 'Mode noir' : 'Mode blanc' }}
+                    </button>
+                </li>
+                <li class="nav-cta">
+                    <a href="#contact" class="btn btn-outline-primary btn-sm">Book a call</a>
                 </li>
             </ul>
             <!--Main Navigation END-->
